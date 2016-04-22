@@ -1,307 +1,83 @@
-/* Page Wide */
-$font-stack: "Open Sans",Helvetica,Arial,sans-serif !important
-$default-font-size: 14px
+// Definitions and mixins
+@font-face
+    font-family: 'abril-fat-face'
+    src: url('../fonts/abril-fat-face-regular.otf')
 
-// http://www.colourlovers.com/palette/490780/The_First_Raindrop 
-// $background-color:  #EFF5F8
-$background-color: #f6f6f6
-$content-bg-color: #fafafa
-$text-color: #333
-$light-blue:        #B2D8ED
-$dark-text:         #242969
-$header-color:      #048CAE
-$border-color:      #60A0BA
-$bg-blue:           #efefff
+$bg-light: #ffffff
+$bg-grey: #f4f4f4
+$bg-dark: #333
 
-$page-width: 900px
+$chris-image: url(../img/chris.jpg)
 
-$thinker-image: url(../img/thinker.jpg)
+h1
+    font-family: 'abril-fat-face'
+    color: #222
+
+p
+    font-family: 'PT Serif',Georgia,Times,serif
+    color: #222
 
 body 
-    font-family: $font-stack
-    font-size: $default-font-size
-    line-height: 1 
-    background-color: $background-color
-    margin: 0px
-    color: $text-color
-
-
-.page-wrapper
-    width: $page-width 
-    margin: 0px auto
-    background-color: $content-bg-color
-    box-shadow: 1px 1px 5px 0px #999
+    background-color: $bg-light
 
 *
-    // outline: red 1px solid
+    //outline: red 1px solid
 
 /* HEADER  */
 header
-    .top-section
-        height: 130px
-        padding: 0 30px
-        .logo 
-            display: inline-block 
-            width: 40% 
-            vertical-align: top 
-            margin: 20px 0px 
-            margin-right: 5%
-            img
-                width: 100%
-        
-        .contact-top 
-            display: inline-block 
-            width: 50% 
-            vertical-align: top 
-            font-size: 1em 
-            line-height: 150% 
-            float: right
-            .contact-title
-                margin: 20px 0px 10px 0px
-                font-weight: bold
-                font-size: 1em
-            
-            a 
-                text-decoration: none
-                color: $header-color
-            
-            .line 
-                height: 2px
-                width: 80%
-                background-color: $header-color
-                margin-bottom: 10px
-            
-            p 
-                line-height: 100%
-                margin: 10px 0px
-            span 
-                font-weight: bold
-                color: $header-color
-                float: left
-                width: 50px
-                margin-right: 40px
+    height: 70px
+    outline: #ccc 2px solid
+    background-color: white
+    h1
+        padding: 0 0 0 20px
+        line-height: 70px
+        font-size: 30px
 
-/* NAV BAR */
-$nav-el-height: 40px
-.navbar  
-    border: none
-    height: $nav-el-height
-    padding: 5px 0 0 0
-    li 
-        float: left
-        box-sizing: border-box
-        height: 100%        
-        width: calc(100% / 6 - 0px)        
-        // margin-right: 3px
-        border: 1px solid #666
-        text-align: center
-        list-style: none
-    li+li
-        border-left: none
-    li:hover 
-        font-weight: 600
-    
-    a 
-        margin: 0
-        padding: 5px
-        color: $text-color
-        height: $nav-el-height
-        line-height: $nav-el-height
-        font-size: 1.1em
-        text-decoration: none
+main
+    // main stuff here
 
-    
-/* HERO */
-.hero 
+.hero-image 
     height: 400px
-    border-bottom: 2px solid #aaa
-.thinker
-    overflow: hidden
-    display: inline-block
-    box-sizing: border-box
-    width: 50%
-    height: 100%
-    $thinker-img-width: 270px
-    .thinker-image 
-        display: inline-block
-        height: 100%
-        width: $thinker-img-width
-        background-image: $thinker-image
-        background-size: contain
-        background-repeat: no-repeat
-    .thinker-fade 
-        display: inline-block
-        overflow: hidden
-        height: 100%
-        width: calc(100% - #{$thinker-img-width} + 10px)
-        margin-left: -10px
-        background-image: linear-gradient(to right,black,$light-blue)
-    .thinker-tagline 
-        position: relative
-        width: 200px
-        bottom: 240px
-        left: 240px
-        margin: 0
-        color: #fff
-        font-size: 1.4em
-        text-shadow: 1px 1px #333
-        // text-decoration:
-
-.hero-info 
-    overflow: hidden
-    display: inline-block          
-    box-sizing: border-box
-    height: 100%
-    width: 50%
-    padding: 20px
-    h3 
-        margin: 0 0 10px 0
-        font-weight: 600
-        color: $header-color
+    width: 100%
+    background-image: $chris-image
+    background-size: 100% auto
+    background-position: center
     
-    p, li 
-        margin-bottom: 7px
-        line-height: 140%
-        font-size: 0.9em
-    ul
-        list-style: disc outside none
-    li
-        margin-left: 40px
-        
-    
-// geenric panel
-.panel
-    padding: 20px 0 20px 0
-    &.middle-panel
-            background-color: $bg-blue
+.content
+    min-height: 200px
+    padding: 30px 0
+    background-color: $bg-light
     h1 
-        width: 90%
+        width: 60%
+        max-width: 500px
         margin: 0 auto 20px auto
-        // background-color: $border-color
-        border-radius: 3px
+        padding: 0 0 10px 0
         text-align: center
-        padding: 5px
-        font-size: 1.5em
-        // color: #fff
-        color: $border-color
+        font-size: 30px
+        border-bottom: 1px solid #ccc
+    p
+        width: 80%
+        max-width: 700px
+        margin: 0 auto 20px auto
+        text-align: left
+        line-height: 26px
+        font-size: 18px
 
-    .panel-info 
-        &.one-panel
-            width: calc(100%)
-        &.three-panel
-            width: calc(100%/3)
-        box-sizing: border-box
-        display: inline-block
-        overflow: hidden
-        height: 250px
-        padding: 10px
-        border-radius: 5px
-        h2
-            margin: 5px 0
-            text-align: center
-            font-weight: bold
-            height: 20px
-        .info-image
-            $info-image-width: 80px
-            width: $info-image-width
-            margin: 0 auto
-            img
-                width: $info-image-width
-                height: $info-image-width
-                border-radius: 100px
-                border: 3px solid $bg-blue
-        .info-blurb
-            width: 200px
-            margin: 0 auto
-            text-align: center
-            padding: 10px
+    
 
-    .info-read-more
-        width: 100px
-        height: 20px
-        margin: 0 auto 0 auto
-        border-radius: 5px
-        line-height: 20px
-        color: $border-color
-        text-align: center
+.alternate
+    background-color: $bg-grey
 
 footer
-    background-color: $bg-blue
-    border-top: 2px solid #aaa
-    padding: 20px 
-    // margin-top: 20px
-
-nav.footer 
-    height: 250px 
-
-.footer-col 
-    float: left
-    width: 280px
-    height: 250px
-    margin-right: calc( (100% - 3 * 280px) /2 - 1px) 
-
-.footer-col:nth-child(3) 
-    margin-right: 0 
-
-.footer-section 
-    text-align: center
-    width: calc($footer-col-width - 2 * $padding)
-    padding: 10px
-    box-sizing: border-box
-    line-height: 200% 
-    .title 
+    height: 500px
+    padding: 30px 0
+    background-color: $bg-dark
+    h1 
+        width: 60%
+        max-width: 500px
+        margin: 0 auto 20px auto
+        padding: 0 0 10px 0
         text-align: center
-        line-height: 130%
-        letter-spacing: 1px
-        font-size: 14px 
-    .line 
-        width: 90%
-        background-color: #999
-        height: 1px
-        margin: 3px auto 5px auto 
-    .location, .navigation 
-        height: 100%
-        overflow: hidden 
-    .contact, .hours 
-        height: 50% 
-    p 
-        font-size: 13px 
-
-.footer-nav 
-    margin: 0 auto 0 auto
-    width: 100% 
-    a 
-        color: #000
-        text-decoration: none
-        letter-spacing: 1px
-        font-size: 12px 
-    a:hover 
-        color: #fff 
-    a:hover li 
-        background-color: #aaa 
-
-.maps-placeholder 
-    background-color: #efefef
-    width: 90%
-    height: 150px
-    box-shadow: 2px 1px 1px 1px #999 
-
-.credits 
-    clear: both
-    margin-top: 10px
-    font-size: 12px 
-    .line 
-        clear: both
-        background-color: #999
-        height: 1px
-        margin: 0px 0px 5px 0px 
-    .left 
-        float: left 
-    .right 
-        float: right 
-
-.disclaimer
-    padding: 0 20px
-    p
-        font-size: 0.8em
-        margin-bottom: 3px
+        font-size: 30px
+        color: #fff
+        border-bottom: 1px solid #fff

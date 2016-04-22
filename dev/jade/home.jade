@@ -2,191 +2,32 @@ doctype html
 html(lang="en")
     head
         meta(charset="utf-8")
+        link(href='https://fonts.googleapis.com/css?family=PT+Serif',rel='stylesheet',type='text/css')
         link(rel="stylesheet", type='text/css', 
             href="{{url_for('static',filename='css/reset.css')}}")
         link(rel="stylesheet", type='text/css', 
             href="{{url_for('static',filename='css/style.css')}}")
-        link(rel="icon", type='image/ico', 
-            href="{{url_for('static',filename='img/favicon.ico')}}")
-        title Skin Cancer Clinic Melbourne
+        title Chris Rodd Lawyer
 
     body
-        .page-wrapper
-            header
+        header
+            h1 Chris Rodd
+        main
+            .hero-image
+            .content
+                h1 Lorem Ipsum
+                p.
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic eaque culpa explicabo facilis perferendis, est placeat ipsum aliquam, odit, ea ab quibusdam unde, cumque ducimus. Error debitis eveniet doloremque quasi numquam nobis, id voluptatem, nisi atque adipisci cumque, quibusdam beatae. Laudantium, consequatur nihil. Est, incidunt laudantium ex! Laborum, quidem, nihil?
+                p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic eaque culpa explicabo facilis perferendis, est placeat ipsum aliquam, odit, ea ab quibusdam unde, cumque ducimus. Error debitis eveniet doloremque quasi numquam nobis, id voluptatem, nisi atque adipisci cumque, quibusdam beatae. Laudantium, consequatur nihil. Est, incidunt laudantium ex! Laborum, quidem, nihil?
 
-                .top-section
-                    //- site logo
-                    .logo
-                        a(href="http://www.skincancerclinic.net.au/" title="Skin Cancer")
-                            img(src="{{url_for('static',filename='img/logo.png')}}" alt="")
-                    //- contact info             
-                    .contact-top
-                            p.contact-title
-                                a(href="http://www.skincancerclinic.net.au/contact") Contact Details
-                            .line
-                            p
-                                span.contactName Address:
-                                | 437 Riversdale Rd Hawthorn East
-                            p
-                                span.contactName Call:
-                                | (03) 9882 1413
-                            p
-                                span.contactName Hours:
-                                | 8:30am to 5:00pm Monday - Friday
-                ul.navbar
-                    li
-                        a(href="#") Home
-                    li
-                        a(href="#") Skin Cancer Info
-                    li
-                        a(href="#") Treatment
-                    li
-                        a(href="#") Services
-                    li
-                        a(href="#") FAQ
-                    li
-                        a(href="#") Contact
-
-                
-            main
-                .hero
-                    .thinker
-                        .thinker-image
-                        .thinker-fade
-                        .thinker-tagline 
-                            |Can I be sure it's
-                            br
-                            |not a skin cancer?
-                    .hero-info
-                        h3 Skin Cancer Clinic Melbourne
-                        p.
-                            The Skin Cancer Assessment and Treatment Centre is a medical clinic specialising in skin. Dr Alan Segal has over 20 years of experience practicing as a specialist dermatologist. His area of expertise is the diagnosis of skin cancers.
-                        p.
-                            If you are concerned about a potentially cancerous mole, we offer a wide range of services to identify and treat the condition. Call us for a professionally performed skin cancer check - referrals are not essential
-                        br
-                        h3 Make an appointment for:
-                        ul
-                            li Visual mole scans
-                            li Skin cancer and mole removal
-                            li Comprehensive skin checks
-                            li Advice on treatments
-                            li Dermatology advice on all skin problems
-
-
-
-            //-  TREATMENT PANEL
-            //-  what we do section aka our services http://www.cbddoctorsmelbourne.com.au/
-            //-  site navigation in footer like http://www.bestdoctors.net.au/
-            .panel
-                h1 Services
-                .panel-info(class="three-panel")
-                    
-                    .info-image
-                        img(src="{{url_for('static',filename='img/mole-check.jpg')}}" alt="")
-                    h2 Mole Checks
-                    .info-blurb.
-                        A visual inspection, identifying troublesome moles
-                    .info-read-more Read More
-                .panel-info(class="three-panel")
-                    .info-image
-                        img(src="{{url_for('static',filename='img/cancer-removal.jpg')}}" alt="")
-                    h2 
-                        |Skin Cancer 
-                        br
-                        |Removal
-                    .info-blurb.
-                        Cutting out skin cancers for health and aesthetic purposes
-                    .info-read-more Read More
-                .panel-info(class="three-panel")
-                    .info-image
-                        img(src="{{url_for('static',filename='img/detmatology-consultation.jpg')}}" alt="")
-                    h2 
-                        |Dermatology
-                        br
-                        |Consultation
-                    .info-blurb.
-                        Inspection and treatment of all other skin conditions
-                    .info-read-more Read More
-            .panel(class="middle-panel")
-                h1 Treatment
-                .panel-info(class="three-panel")
-                    .info-image
-                        img(src="{{url_for('static',filename='img/other_treatments.svg')}}" alt="")
-                    h2 Skin Inspection
-                    .info-blurb.
-                        Obtain peace of mind
-                    .info-read-more Read More
-                .panel-info(class="three-panel")
-                    .info-image
-                        img(src="{{url_for('static',filename='img/surgical.svg')}}" alt="")
-                    h2 Surgical
-                    .info-blurb.
-                        Surgery performed on-site
-                    .info-read-more Read More
-                .panel-info(class="three-panel")
-                    .info-image
-                        img(src="{{url_for('static',filename='img/medical.svg')}}" alt="")
-                    h2 Medical
-                    .info-blurb.
-                         Creams and other treatments
-                    .info-read-more Read More
-
-            .panel
-                .panel-info(class="one-panel")
-                    .info-image
-                        img(src="{{url_for('static',filename='img/dad.jpg')}}" alt="")
-                    h2 Dr. Alan Segal
-                    .info-blurb(style="width: 500px")
-                        |Over 20 years of experience as a practicing dermatiologist.
-                        br
-                        |Expert is the diagnosis of skin cancers.
-            footer
-                nav.footer
-                    .footer-col
-                        div(class="footer-section location")
-                            .title Location
-                            .linev
-                            p 432 Briggs St Hawthorn West
-                            //- !-- not supposed to have publicly visible api key --
-                            //- !-- browser key 1 AIzaSyDoBuBzB_FORmsbnYVrUmSfztK1P4Hzw6Y --
-                            //- !-- browser key 2 AIzaSyBbPnC1yFr7Hb9o061NrEnWI2K6owYR8dc --
-                            .maps-placeholder Google Maps goes here
-                            //- !-- iframe 
-                            //-     frameborder="0" 
-                            //-     style="border:0"
-                            //-     src="https://www.google.com/maps/embed/v1/place?q=place_id:EisxMDAgQ2h1cmNoIFN0LCBSaWNobW9uZCBWSUMgMzEyMSwgQXVzdHJhbGlh&key=AIzaSyBbPnC1yFr7Hb9o061NrEnWI2K6owYR8dc" 
-                            //-     allowfullscreen
-                            //- /iframe --
-                            
-                    .footer-col
-                        div(class="footer-section contact")
-                            .title Contact
-                            .line
-                            p (03) 9772 1441
-                            p support@example.com
-                        div(class="footer-section hours")
-                            .title Hours
-                            .line
-                            p 8:30am to 5:00pm
-                            p Monday - Friday
-
-                    .footer-col
-                        div(class="footer-section navigation")
-                            .title Navigation
-                            .line
-                            ul.footer-nav
-                                a(href="#")
-                                    li Home
-                                a(href="#")
-                                    li Skin Cancer Info
-                                a(href="#")
-                                    li Treatment
-                                a(href="#")
-                                    li Services
-                                a(href="#")
-                                    li FAQ
-                                a(href="#")
-                                    li Contact
-                 .disclaimer
-                    p.
-                        Disclaimer: The content of this website is for the purpose of general information only and is not in any way meant to be used for the purposes of diagnosis or treatment of any skin conditions. The diagnosis and treatment of skin conditions should ONLY be carried out by suitably qualified Medical Practitioners The opinions expressed herein are those solely of Dr Alan Segal.
+            .content(class="alternate")
+                h1 Lorem Ipsum
+                p.
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nostrum iusto fugiat culpa, harum deleniti porro, consequatur aliquid alias explicabo a. Modi, nihil illo veniam voluptatem ea ex mollitia fuga.
+            .content
+                h1 Lorem Ipsum
+                p.
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea mollitia adipisci unde ex, aperiam perferendis fugiat quisquam, hic a animi neque iure fugit aspernatur, ipsa natus deleniti maiores accusamus totam repellat omnis error. Quas, voluptate!
+        footer
+            h1 Contact
