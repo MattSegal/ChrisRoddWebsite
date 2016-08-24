@@ -7,8 +7,9 @@
 
 $bg-behind: #dddddd
 $bg-light: #ffffff
-$bg-grey: #f4f4f4
+$bg-grey: #f2f2f2
 $bg-dark: #333
+$paragraph-text: #111
 
 $chris-image: url(../img/chris.jpg)
 
@@ -16,10 +17,13 @@ h1, h2, nav, a
     font-family: 'abril-fat-face'
     color: #222
 
-p
+p, li, h3
     font-family: 'EB Garamond',Georgia,Times,serif
-    color: #222
+    color: $paragraph-text
+p, li
     font-weight: 400
+h3 
+    font-weight: 600
 
 html
     background-color: $bg-behind
@@ -59,7 +63,7 @@ header
     
 .content
     min-height: 20em
-    padding: 7em 0
+    padding: 6em 0
     background-color: $bg-light
     .content-header
         width: 60%
@@ -75,16 +79,27 @@ header
     h1+h2
         padding: 0.7em 0 0 0
         
-    p
+    p, h3, li
         width: 80%
         max-width: 700px
-        margin: 0 auto 1.2em auto
+        margin: 0 auto 0 auto
         text-align: left
         line-height: 1.7em
         font-size: 1.8em
         letter-spacing: 0.3px
+    li
+        padding-left: 2em
+    p
+        margin-bottom: 1.2em
         &:nth-last-child(1)
             margin-bottom: 1em
+    ul
+        margin-bottom: 2em
+        &:nth-last-child(1)
+            margin-bottom: 1em
+    span.date
+        display: inline-block
+        width: 5em
 
 
 .alternate
