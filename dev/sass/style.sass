@@ -5,21 +5,24 @@
     font-family: 'abril-fat-face'
     src: url('../fonts/abril-fat-face-regular.otf')
 
+$bg-behind: #dddddd
 $bg-light: #ffffff
 $bg-grey: #f4f4f4
 $bg-dark: #333
 
 $chris-image: url(../img/chris.jpg)
 
-h1, nav, a
+h1, h2, nav, a
     font-family: 'abril-fat-face'
     color: #222
 
 p
     font-family: 'EB Garamond',Georgia,Times,serif
-    // font-family: 'PT Serif',Georgia,Times,serif
     color: #222
     font-weight: 400
+
+html
+    background-color: $bg-behind
 
 body 
     background-color: $bg-light
@@ -58,18 +61,24 @@ header
     min-height: 20em
     padding: 7em 0
     background-color: $bg-light
-    h1 
+    .content-header
         width: 60%
-        max-width: 500px
-        margin: 0 auto 1em auto
-        padding: 0 0 0.5em 0
-        text-align: center
-        font-size: 3em
+        max-width: 600px
+        margin: 0 auto 1.8em auto
+        padding: 0 0 1.2em 0
         border-bottom: 1px solid #ccc
+        text-align: center
+    h1 
+        font-size: 2.5em
+    h2
+        font-size: 2em
+    h1+h2
+        padding: 0.7em 0 0 0
+        
     p
         width: 80%
-        max-width: 600px
-        margin: 0 auto 2em auto
+        max-width: 700px
+        margin: 0 auto 1.2em auto
         text-align: left
         line-height: 1.7em
         font-size: 1.8em
@@ -110,9 +119,9 @@ footer
 
 @media (min-width: 1000px)
     body
-        width: 800px
+        width: 900px
         margin: 0 auto
-        box-shadow: 2px 0px 40px 2px #333
+        box-shadow: 2px 0px 30px 2px #666
         background-color: #fff
     header
         height: 10em

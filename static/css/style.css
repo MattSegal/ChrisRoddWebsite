@@ -3,7 +3,7 @@
   font-family: 'abril-fat-face';
   src: url("../fonts/abril-fat-face-regular.otf"); }
 
-h1, nav, a {
+h1, h2, nav, a {
   font-family: 'abril-fat-face';
   color: #222; }
 
@@ -11,6 +11,9 @@ p {
   font-family: 'EB Garamond',Georgia,Times,serif;
   color: #222;
   font-weight: 400; }
+
+html {
+  background-color: #dddddd; }
 
 body {
   background-color: #ffffff;
@@ -46,18 +49,23 @@ header {
   min-height: 20em;
   padding: 7em 0;
   background-color: #ffffff; }
-  .content h1 {
+  .content .content-header {
     width: 60%;
-    max-width: 500px;
-    margin: 0 auto 1em auto;
-    padding: 0 0 0.5em 0;
-    text-align: center;
-    font-size: 3em;
-    border-bottom: 1px solid #ccc; }
+    max-width: 600px;
+    margin: 0 auto 1.8em auto;
+    padding: 0 0 1.2em 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center; }
+  .content h1 {
+    font-size: 2.5em; }
+  .content h2 {
+    font-size: 2em; }
+  .content h1 + h2 {
+    padding: 0.7em 0 0 0; }
   .content p {
     width: 80%;
-    max-width: 600px;
-    margin: 0 auto 2em auto;
+    max-width: 700px;
+    margin: 0 auto 1.2em auto;
     text-align: left;
     line-height: 1.7em;
     font-size: 1.8em;
@@ -96,9 +104,9 @@ footer {
 
 @media (min-width: 1000px) {
   body {
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
-    box-shadow: 2px 0px 40px 2px #333;
+    box-shadow: 2px 0px 30px 2px #666;
     background-color: #fff; }
   header {
     height: 10em;

@@ -17,26 +17,22 @@ html(lang="en")
                 a(href="#contact") Contact
         .hero-image
             .pre-load-hero 
+        // Christopher J Rodd    B.Juris, LLB, Grad Dip Ins Law, ANZIIF (Fellow) 
+        // Insurance Law Consultant, 
+        // Melbourne, Australia
         .content
-            h1 Lorem Ipsum
-            p.
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic eaque culpa explicabo facilis perferendis, est placeat ipsum aliquam, odit, ea ab quibusdam unde, cumque ducimus. Error debitis eveniet doloremque quasi numquam nobis, id voluptatem, nisi atque adipisci cumque, quibusdam beatae. Laudantium, consequatur nihil. Est, incidunt laudantium ex! Laborum, quidem, nihil?
-            p.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic eaque culpa explicabo facilis perferendis, est placeat ipsum aliquam, odit, ea ab quibusdam unde, cumque ducimus. Error debitis eveniet doloremque quasi numquam nobis, id voluptatem, nisi atque adipisci cumque, quibusdam beatae. Laudantium, consequatur nihil. Est, incidunt laudantium ex! Laborum, quidem, nihil?
-
+            {% include "about.html" %}
         .content(class="alternate")
-            h1 Lorem Ipsum
-            p.
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nostrum iusto fugiat culpa, harum deleniti porro, consequatur aliquid alias explicabo a. Modi, nihil illo veniam voluptatem ea ex mollitia fuga.
+            {% include "comittees.html" %}
         .content
-            h1 Lorem Ipsum
-            p.
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea mollitia adipisci unde ex, aperiam perferendis fugiat quisquam, hic a animi neque iure fugit aspernatur, ipsa natus deleniti maiores accusamus totam repellat omnis error. Quas, voluptate!
+            {% include "cgu.html" %}
+        .content(class="alternate")
+            {% include "teaching.html" %}
         footer(id="contact")
             // put one of those # tags in here so we can navigate to #contact
             h1 Contact
-            p chris@chrismail.com
-            p 0431 832 123
+            p chrisjrodd@gmail.com
+            p +61 401 993 411
         script.
             // when bg image loaded, swap out full image
             window.onload = function loadSharpImages() {
