@@ -13,23 +13,26 @@ html(lang="en")
     body
         header
             h1 Chris Rodd
-            nav
-                a(href="#contact") Contact
         .hero-image
             .pre-load-hero 
         // Christopher J Rodd    B.Juris, LLB, Grad Dip Ins Law, ANZIIF (Fellow) 
         // Insurance Law Consultant, 
         // Melbourne, Australia
-        .content
+        .button-box
+            .button(id="about-btn") About
+            .button(id="comittees-btn") Comittees
+            .button(id="cgu-btn") CGU
+            .button(id="teaching-btn") Teaching
+            .button(id="contact-btn") Contact
+        .content(id="about-content")
             {% include "about_chris.html" %}
-        .content(class="alternate")
+        .content(id="comittees-content", class="hidden")
             {% include "comittees.html" %}
-        .content
+        .content(id="cgu-content", class="hidden")
             {% include "cgu.html" %}
-        .content(class="alternate")
+        .content(id="teaching-content", class="hidden")
             {% include "teaching.html" %}
-        footer(id="contact")
-            // put one of those # tags in here so we can navigate to #contact
+        footer(id="contact-content" class="hidden")
             h1 Contact
             p chrisjrodd@gmail.com
             p +61 401 993 411
@@ -51,3 +54,5 @@ html(lang="en")
                     fadeOut(0)
                 }
             };
+        script(src="{{url_for('chris_profile.static',filename='js/jquery-3.1.0.min.js')}}")
+        script(src="{{url_for('chris_profile.static',filename='js/main.js')}}")
