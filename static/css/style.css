@@ -31,8 +31,12 @@ header {
   background-color: white; }
   header h1 {
     float: left;
-    padding: 0 0 0 1em;
+    margin-left: 1em;
     font-size: 3em; }
+  header h2 {
+    float: right;
+    margin-right: 3em;
+    font-size: 1.5em; }
 
 .hero-image {
   background-color: #f2f2f2;
@@ -50,13 +54,10 @@ header {
   .content .content-header {
     width: 60%;
     max-width: 600px;
-    margin: 0 auto 1.8em auto;
-    padding: 0 0 1.2em 0;
+    margin: 0 auto 3em auto;
+    padding: 0 0 2em 0;
     border-bottom: 1px solid #ccc;
     text-align: center; }
-
-.hidden {
-  display: none; }
 
 .button-box {
   box-sizing: border-box;
@@ -67,26 +68,29 @@ header {
   padding: 30px 10px 0 0;
   text-align: center; }
 
-.button {
+.hidden {
+  display: none; }
+
+.content .button, .button-box .button {
   cursor: pointer;
   display: inline-block;
   padding: 0 0 10px 0; }
-  .button:hover {
+  .content .button:hover, .button-box .button:hover {
     text-decoration: underline; }
 
-.button + .button {
+.content .button + .button, .button-box .button + .button {
   padding-left: 20px; }
 
-h1 {
+.content h1, .button-box h1 {
   font-size: 2.5em; }
 
-h2, .button {
+.content h2, .content .button, .button-box h2, .button-box .button {
   font-size: 2em; }
 
-h1 + h2 {
+.content h1 + h2, .button-box h1 + h2 {
   padding: 0.7em 0 0 0; }
 
-p, h3, li {
+.content p, .content h3, .content li, .button-box p, .button-box h3, .button-box li {
   width: 80%;
   max-width: 700px;
   margin: 0 auto 0 auto;
@@ -95,24 +99,27 @@ p, h3, li {
   font-size: 1.8em;
   letter-spacing: 0.3px; }
 
-li {
-  padding-left: 2em; }
+.content span.italic, .button-box span.italic {
+  font-style: italic; }
 
-p {
+.content li, .button-box li {
+  padding: 0.1em 0 0.1em 2em; }
+
+.content p, .button-box p {
   margin-bottom: 1.2em; }
-  p:nth-last-child(1) {
+  .content p:nth-last-child(1), .button-box p:nth-last-child(1) {
     margin-bottom: 1em; }
 
-ul {
-  margin-bottom: 2em; }
-  ul:nth-last-child(1) {
+.content ul, .button-box ul {
+  margin-bottom: 3em; }
+  .content ul:nth-last-child(1), .button-box ul:nth-last-child(1) {
     margin-bottom: 1em; }
 
-span.date {
+.content span.date, .button-box span.date {
   display: inline-block;
   width: 5em; }
 
-.alternate {
+.content .alternate, .button-box .alternate {
   background-color: #f2f2f2; }
 
 footer {
@@ -130,7 +137,7 @@ footer {
     color: #fff;
     border-bottom: 1px solid #fff; }
   footer p {
-    margin: 0 auto 2.5em auto;
+    margin: 0 auto 2em auto;
     text-align: center;
     font-size: 1.8em;
     color: #fff; }
@@ -138,7 +145,7 @@ footer {
 @media (max-height: 475px), (max-width: 500px) {
   body {
     font-size: 7px; }
-  header h1 {
+  header h1, header h2 {
     text-align: center; } }
 
 @media (min-width: 1100px) {
@@ -150,7 +157,9 @@ footer {
   header {
     height: 10em;
     line-height: 10em; }
-    header h1 {
-      padding: 0 0 0 1.5em; }
     header nav {
       padding: 0 3em 0 0; } }
+
+@media (max-width: 600px) {
+  header h2 {
+    display: none; } }
