@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/chris/')
+@app.route('/')
 def homepage():
     return render_template('./chris.html')
 
