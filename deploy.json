@@ -1,5 +1,4 @@
 {
-    
     "dirs" : {
         "deployable" : [
             "static",
@@ -8,9 +7,6 @@
             "img",
             "fonts",
             "templates"
-        ],
-        "non-deployable" : [
-
         ]
     },
 
@@ -31,9 +27,7 @@
             "ttf",
             "woff"
         ],
-        "deployable" : [
-
-        ],
+        "deployable" : [],
         "non-deployable" : [
             "gulpfile.js"
         ]
