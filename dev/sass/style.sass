@@ -73,10 +73,8 @@ header
 .button-box
     box-sizing: border-box
     min-height: 10vh
-    width: 100%
-    max-width: 80%
     margin: 0 auto
-    padding: 50px 0 50px 0
+    padding: 4em 0 4em 0
     text-align: center
 
 .hidden
@@ -88,10 +86,14 @@ header
         cursor: pointer
         display: inline-block
         height: 2em
-        padding: 1em 1em 1em 1em
+        line-height: 0
+        padding: 1em
         box-sizing: border-box
         &:hover
             text-decoration: underline
+        &.selected
+            color: #a15
+
     .button+.button
         padding-left: 20px
 
@@ -157,6 +159,11 @@ footer
 
     header h1, header h2
         text-align: center
+
+    .button-box
+        padding: 2em 0 4em 0
+        .button
+            padding: 1.5em 1em
 
 @media (min-width: 1100px)
     body

@@ -5,7 +5,6 @@ var panels = [
     "teaching",
     "contact",
 ].map(initPanel)
-panels.forEach(setEvents)
 
 function initPanel(panelName) {
     return {
@@ -14,18 +13,25 @@ function initPanel(panelName) {
     }
 }
 
+panels.forEach(setEvents)
 function setEvents(panel) {
     panel.button.on('click',function() {
-        showContent(panel.content)
-    })
-}
+        
+        $('html, body').animate({
+            scrollTop: ($('.button-box').offset().top)
+        },500)
 
-function showContent(content) {
-    $('html, body').animate({
-        scrollTop: ($('.button-box').offset().top)
-    },500)
-    panels.forEach(function(panel) {
-        panel.content.hide()
+        panels.forEach(function(p) {
+            if (p === panel)
+            {
+                p.button.addClass("selected")
+                p.content.fadeIn(300)
+            }
+            else
+            {
+                p.button.removeClass("selected")
+                p.content.hide()
+            }
+        })
     })
-    content.fadeIn(300)
 }
