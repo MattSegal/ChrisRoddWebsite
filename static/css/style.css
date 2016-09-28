@@ -65,7 +65,7 @@ header {
   width: 100%;
   max-width: 80%;
   margin: 0 auto;
-  padding: 30px 0 0 0;
+  padding: 50px 0 50px 0;
   text-align: center; }
 
 .hidden {
@@ -75,7 +75,7 @@ header {
   cursor: pointer;
   display: inline-block;
   height: 2em;
-  padding: 0 1em 0.5em 1em;
+  padding: 1em 1em 1em 1em;
   box-sizing: border-box; }
   .content .button:hover, .button-box .button:hover {
     text-decoration: underline; }
