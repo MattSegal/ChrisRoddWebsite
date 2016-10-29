@@ -54,11 +54,14 @@ header {
       height: 10em;
       line-height: 10em; } }
   @media (max-height: 475px), (max-width: 500px) {
-    header h1 {
-      float: none;
-      margin: 0;
-      display: block;
-      text-align: center; } }
+    header {
+      height: 10vh; }
+      header h1 {
+        line-height: 10vh;
+        float: none;
+        margin: 0;
+        display: block;
+        text-align: center; } }
 
 .hidden {
   display: none; }
@@ -75,7 +78,8 @@ header {
       background-position: center 5%; } }
   @media (max-height: 475px), (max-width: 500px) {
     .hero-image, .pre-load-hero {
-      background-position: left 5%; } }
+      height: 80vh;
+      background-position: 10% 5%; } }
 
 .pre-load-hero {
   opacity: 1;
@@ -133,7 +137,7 @@ header {
   text-align: center; }
   @media (max-height: 475px), (max-width: 500px) {
     .button-box {
-      padding: 2em 0em 4em 0em; } }
+      padding: 2em 0em 2em 0em; } }
   .button-box .button {
     cursor: pointer;
     display: inline-block;

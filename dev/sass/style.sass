@@ -66,7 +66,10 @@ header
         height: 10em
         line-height: 10em
     @media #{$phone}
+        $height: 10vh
+        height: $height
         h1
+            line-height: $height
             float: none
             margin: 0
             display: block
@@ -85,7 +88,8 @@ header
     @media #{$desktop}
         background-position: center 5%
     @media #{$phone}
-        background-position: left 5%
+        height: 80vh
+        background-position: 10% 5%
 
 .pre-load-hero
     @extend .hero-image
@@ -150,7 +154,7 @@ header
     padding: 4em 0 4em 0
     text-align: center
     @media #{$phone}
-        padding: 2em 0em 4em 0em
+        padding: 2em 0em 2em 0em
     .button
         @extend h2
         cursor: pointer
