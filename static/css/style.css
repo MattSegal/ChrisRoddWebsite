@@ -3,7 +3,7 @@
   font-family: 'abril-fat-face';
   src: url("../fonts/abril-fat-face-regular.otf"); }
 
-h1, h2, nav, a, .button {
+h1, h2, .button-box .button, nav, a, .button {
   font-family: 'abril-fat-face';
   color: #222; }
 
@@ -18,11 +18,20 @@ h3 {
   font-weight: 600; }
 
 html {
-  background-color: #dddddd; }
+  background-color: #eee; }
 
 body {
   background-color: #ffffff;
   font-size: 10px; }
+  @media (min-width: 950px) {
+    body {
+      width: 900px;
+      margin: 0 auto;
+      box-shadow: 2px 0px 30px 2px #666;
+      background-color: #fff; } }
+  @media (max-height: 475px), (max-width: 500px) {
+    body {
+      font-size: 7px; } }
 
 /* HEADER  */
 header {
@@ -33,31 +42,88 @@ header {
     float: left;
     margin-left: 1em;
     font-size: 3em; }
-  header h2 {
+  header h2, header .button-box .button, .button-box header .button {
     float: right;
     margin-right: 3em;
     font-size: 1.5em; }
+    @media (max-width: 600px) {
+      header h2, header .button-box .button, .button-box header .button {
+        display: none; } }
+  @media (min-width: 950px) {
+    header {
+      height: 10em;
+      line-height: 10em; } }
+  @media (max-height: 475px), (max-width: 500px) {
+    header h1 {
+      float: none;
+      margin: 0;
+      display: block;
+      text-align: center; } }
 
-.hero-image {
+.hidden {
+  display: none; }
+
+.hero-image, .pre-load-hero {
   background-color: #f2f2f2;
-  height: 45em;
+  height: 55em;
   width: 100%;
   background-image: url(../img/chris.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: 5% 5%; }
+  @media (min-width: 950px) {
+    .hero-image, .pre-load-hero {
+      background-position: center 5%; } }
+  @media (max-height: 475px), (max-width: 500px) {
+    .hero-image, .pre-load-hero {
+      background-position: left 5%; } }
 
-.content {
+.pre-load-hero {
+  opacity: 1;
+  z-index: -1; }
+
+.content, .button-box {
   box-sizing: border-box;
   min-height: 90vh;
   padding: 0 0 4em 0;
   background-color: #ffffff; }
-  .content .content-header {
+  .content .content-header, .button-box .content-header {
     width: 60%;
     max-width: 600px;
     margin: 0 auto 3em auto;
     padding: 0 0 2em 0;
     border-bottom: 1px solid #ccc;
     text-align: center; }
+  .content h1, .button-box h1 {
+    font-size: 2.5em; }
+  .content h2, .button-box h2, .button-box .button {
+    font-size: 2em; }
+  .content h1 + h2, .button-box h1 + h2, .button-box .content h1 + .button, .button-box h1 + .button {
+    padding: 0.7em 0 0 0; }
+  .content p, .button-box p, .content h3, .button-box h3, .content li, .button-box li {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    line-height: 1.7em;
+    font-size: 1.8em;
+    letter-spacing: 0.3px; }
+  .content span.italic, .button-box span.italic {
+    font-style: italic; }
+  .content li, .button-box li {
+    padding: 0.1em 0 0.1em 2em; }
+  .content p, .button-box p {
+    margin-bottom: 1.2em; }
+    .content p:nth-last-child(1), .button-box p:nth-last-child(1) {
+      margin-bottom: 1em; }
+  .content ul, .button-box ul {
+    margin-bottom: 3em; }
+    .content ul:nth-last-child(1), .button-box ul:nth-last-child(1) {
+      margin-bottom: 1em; }
+  .content span.date, .button-box span.date {
+    display: inline-block;
+    width: 5em; }
+  .content .alternate, .button-box .alternate {
+    background-color: #f2f2f2; }
 
 .button-box {
   box-sizing: border-box;
@@ -65,65 +131,25 @@ header {
   margin: 0 auto;
   padding: 4em 0 4em 0;
   text-align: center; }
-
-.hidden {
-  display: none; }
-
-.content .button, .button-box .button {
-  cursor: pointer;
-  display: inline-block;
-  height: 2em;
-  line-height: 0;
-  padding: 1em;
-  box-sizing: border-box; }
-  .content .button:hover, .button-box .button:hover {
-    text-decoration: underline; }
-  .content .button.selected, .button-box .button.selected {
-    color: #a15; }
-
-.content .button + .button, .button-box .button + .button {
-  padding-left: 20px; }
-
-.content h1, .button-box h1 {
-  font-size: 2.5em; }
-
-.content h2, .content .button, .button-box h2, .button-box .button {
-  font-size: 2em; }
-
-.content h1 + h2, .button-box h1 + h2 {
-  padding: 0.7em 0 0 0; }
-
-.content p, .content h3, .content li, .button-box p, .button-box h3, .button-box li {
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto 0 auto;
-  text-align: left;
-  line-height: 1.7em;
-  font-size: 1.8em;
-  letter-spacing: 0.3px; }
-
-.content span.italic, .button-box span.italic {
-  font-style: italic; }
-
-.content li, .button-box li {
-  padding: 0.1em 0 0.1em 2em; }
-
-.content p, .button-box p {
-  margin-bottom: 1.2em; }
-  .content p:nth-last-child(1), .button-box p:nth-last-child(1) {
-    margin-bottom: 1em; }
-
-.content ul, .button-box ul {
-  margin-bottom: 3em; }
-  .content ul:nth-last-child(1), .button-box ul:nth-last-child(1) {
-    margin-bottom: 1em; }
-
-.content span.date, .button-box span.date {
-  display: inline-block;
-  width: 5em; }
-
-.content .alternate, .button-box .alternate {
-  background-color: #f2f2f2; }
+  @media (max-height: 475px), (max-width: 500px) {
+    .button-box {
+      padding: 2em 0em 4em 0em; } }
+  .button-box .button {
+    cursor: pointer;
+    display: inline-block;
+    height: 2em;
+    line-height: 0;
+    padding: 1em 0.4em;
+    box-sizing: border-box; }
+    .button-box .button:hover {
+      text-decoration: underline; }
+    .button-box .button.selected {
+      color: #a15; }
+    @media (max-height: 475px), (max-width: 500px) {
+      .button-box .button {
+        padding: 1.5em 0; } }
+  .button-box .button + .button {
+    margin-left: 20px; }
 
 footer {
   box-sizing: border-box;
@@ -144,29 +170,3 @@ footer {
     text-align: center;
     font-size: 1.8em;
     color: #fff; }
-
-@media (max-height: 475px), (max-width: 500px) {
-  body {
-    font-size: 7px; }
-  header h1, header h2 {
-    text-align: center; }
-  .button-box {
-    padding: 2em 0 4em 0; }
-    .button-box .button {
-      padding: 1.5em 1em; } }
-
-@media (min-width: 1100px) {
-  body {
-    width: 900px;
-    margin: 0 auto;
-    box-shadow: 2px 0px 30px 2px #666;
-    background-color: #fff; }
-  header {
-    height: 10em;
-    line-height: 10em; }
-    header nav {
-      padding: 0 3em 0 0; } }
-
-@media (max-width: 600px) {
-  header h2 {
-    display: none; } }

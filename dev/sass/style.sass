@@ -5,13 +5,19 @@
     font-family: 'abril-fat-face'
     src: url('../fonts/abril-fat-face-regular.otf')
 
-$bg-behind: #dddddd
+$bg-behind: #eee
 $bg-light: #ffffff
 $bg-grey: #f2f2f2
 $bg-dark: #333
 $paragraph-text: #111
 
 $chris-image: url(../img/chris.jpg)
+
+
+$desktop: "(min-width: 950px)"
+$phone: "(max-height: 475px), (max-width: 500px)"
+
+ 
 
 h1, h2, nav, a, .button
     font-family: 'abril-fat-face'
@@ -31,6 +37,13 @@ html
 body 
     background-color: $bg-light
     font-size: 10px
+    @media #{$desktop}
+        width: 900px
+        margin: 0 auto
+        box-shadow: 2px 0px 30px 2px #666
+        background-color: #fff
+    @media #{$phone}
+        font-size: 7px
 
 /* HEADER  */
 header
@@ -45,15 +58,41 @@ header
         float: right
         margin-right: 3em
         font-size:  1.5em
+        @media (max-width: 600px)
+            // When the subtitle clashes with the title
+            display: none
+
+    @media #{$desktop}
+        height: 10em
+        line-height: 10em
+    @media #{$phone}
+        h1
+            float: none
+            margin: 0
+            display: block
+            text-align: center
+
+.hidden
+    display: none
 
 .hero-image
     background-color: $bg-grey
-    height: 45em
+    height: 55em
     width: 100%
     background-image: $chris-image
     background-size: cover
-    background-position: center
-    
+    background-position: 5% 5%
+    @media #{$desktop}
+        background-position: center 5%
+    @media #{$phone}
+        background-position: left 5%
+
+.pre-load-hero
+    @extend .hero-image
+    // background-image set inline in HTML
+    opacity: 1 
+    z-index: -1
+
 .content
     box-sizing: border-box
     min-height: 90vh
@@ -67,39 +106,9 @@ header
         border-bottom: 1px solid #ccc
         text-align: center
 
-// *
-//     outline: solid red 1px
-
-.button-box
-    box-sizing: border-box
-    min-height: 10vh
-    margin: 0 auto
-    padding: 4em 0 4em 0
-    text-align: center
-
-.hidden
-    display: none
-
-.content, .button-box
-
-    .button
-        cursor: pointer
-        display: inline-block
-        height: 2em
-        line-height: 0
-        padding: 1em
-        box-sizing: border-box
-        &:hover
-            text-decoration: underline
-        &.selected
-            color: #a15
-
-    .button+.button
-        padding-left: 20px
-
     h1 
         font-size: 2.5em
-    h2, .button
+    h2,
         font-size: 2em
     h1+h2
         padding: 0.7em 0 0 0
@@ -133,6 +142,32 @@ header
     .alternate
         background-color: $bg-grey
 
+.button-box
+    @extend .content
+    box-sizing: border-box
+    min-height: 10vh
+    margin: 0 auto
+    padding: 4em 0 4em 0
+    text-align: center
+    @media #{$phone}
+        padding: 2em 0em 4em 0em
+    .button
+        @extend h2
+        cursor: pointer
+        display: inline-block
+        height: 2em
+        line-height: 0
+        padding: 1em 0.4em
+        box-sizing: border-box
+        &:hover
+            text-decoration: underline
+        &.selected
+            color: #a15
+        @media #{$phone}
+            padding: 1.5em 0
+    .button+.button
+        margin-left: 20px
+
 footer
     box-sizing: border-box
     height: 90vh
@@ -152,35 +187,6 @@ footer
         text-align: center
         font-size: 1.8em
         color: #fff
-
-@media (max-height: 475px), (max-width: 500px)
-    body
-        font-size: 7px
-
-    header h1, header h2
-        text-align: center
-
-    .button-box
-        padding: 2em 0 4em 0
-        .button
-            padding: 1.5em 1em
-
-@media (min-width: 1100px)
-    body
-        width: 900px
-        margin: 0 auto
-        box-shadow: 2px 0px 30px 2px #666
-        background-color: #fff
-    header
-        height: 10em
-        line-height: 10em
-        nav
-            padding: 0 3em 0 0
-
-@media (max-width: 600px)
-    header
-        h2
-            display: none
 
 
  
