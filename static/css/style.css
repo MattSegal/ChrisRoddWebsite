@@ -21,7 +21,7 @@ html {
   background-color: #eee; }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff;
   font-size: 10px; }
   @media (min-width: 950px) {
     body {
@@ -89,7 +89,7 @@ header {
   box-sizing: border-box;
   min-height: 90vh;
   padding: 0 0 4em 0;
-  background-color: #ffffff; }
+  background-color: #fff; }
   .content .content-header, .button-box .content-header {
     width: 60%;
     max-width: 600px;
@@ -126,8 +126,6 @@ header {
   .content span.date, .button-box span.date {
     display: inline-block;
     width: 5em; }
-  .content .alternate, .button-box .alternate {
-    background-color: #f2f2f2; }
 
 .button-box {
   box-sizing: border-box;

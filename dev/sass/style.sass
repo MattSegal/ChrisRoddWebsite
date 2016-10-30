@@ -6,26 +6,31 @@
     src: url('../fonts/abril-fat-face-regular.otf')
 
 $bg-behind: #eee
-$bg-light: #ffffff
 $bg-grey: #f2f2f2
-$bg-dark: #333
-$paragraph-text: #111
+
+// Regular colors
+$header-text-color: #222
+$selected-text-color: #a15
+$paragraph-text-color: #111
+$bg-color: #fff
+
+// Contact panel colors
+$header-text-color-alt: #fff
+$selected-text-color-alt: #fcc
+$paragraph-text-color-alt: #fff
+$bg-color-alt: #333
 
 $chris-image: url(../img/chris.jpg)
-
-
 $desktop: "(min-width: 950px)"
 $phone: "(max-height: 475px), (max-width: 500px)"
 
- 
-
 h1, h2, nav, a, .button
     font-family: 'abril-fat-face'
-    color: #222
+    color: $header-text-color
 
 p, li, h3
     font-family: 'EB Garamond',Georgia,Times,serif
-    color: $paragraph-text
+    color: $paragraph-text-color
 p, li
     font-weight: 400
 h3 
@@ -35,13 +40,13 @@ html
     background-color: $bg-behind
 
 body 
-    background-color: $bg-light
+    background-color: $bg-color
     font-size: 10px
     @media #{$desktop}
         width: 900px
         margin: 0 auto
         box-shadow: 2px 0px 30px 2px #666
-        background-color: #fff
+        background-color: $bg-color
     @media #{$phone}
         font-size: 7px
 
@@ -101,7 +106,7 @@ header
     box-sizing: border-box
     min-height: 90vh
     padding: 0 0 4em 0
-    background-color: $bg-light
+    background-color: $bg-color
     .content-header
         width: 60%
         max-width: 600px
@@ -143,9 +148,6 @@ header
         display: inline-block
         width: 5em
 
-    .alternate
-        background-color: $bg-grey
-
 .button-box
     @extend .content
     box-sizing: border-box
@@ -166,7 +168,7 @@ header
         &:hover
             text-decoration: underline
         &.selected
-            color: #a15
+            color: $selected-text-color
         @media #{$phone}
             padding: 1.5em 0
     .button+.button
@@ -176,7 +178,7 @@ footer
     box-sizing: border-box
     height: 90vh
     padding: 5em 0
-    background-color: $bg-dark
+    background-color: $bg-color-alt
     h1 
         width: 60%
         max-width: 500px
@@ -184,13 +186,13 @@ footer
         padding: 0 0 1em 0
         text-align: center
         font-size: 3em
-        color: #fff
-        border-bottom: 1px solid #fff
+        color: $header-text-color-alt
+        border-bottom: 1px solid $header-text-color-alt
     p
         margin: 0 auto 2em auto
         text-align: center
         font-size: 1.8em
-        color: #fff
+        color: $paragraph-text-color-alt
 
 
  
