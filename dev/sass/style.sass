@@ -23,6 +23,7 @@ $bg-color-alt: #333
 $chris-image: url(../img/chris.jpg)
 $desktop: "(min-width: 950px)"
 $phone: "(max-height: 475px), (max-width: 500px)"
+$tiny-phone: "(max-width: 325px)"
 
 h1, h2, nav, a, .button
     font-family: 'abril-fat-face'
@@ -102,11 +103,19 @@ header
     opacity: 1 
     z-index: -1
 
-.content
+._panel
     box-sizing: border-box
-    min-height: 90vh
-    padding: 0 0 4em 0
     background-color: $bg-color
+    h1 
+        font-size: 2.5em
+    h2,
+        font-size: 2em
+
+.content
+    @extend ._panel
+    height: 90vh
+    overflow-y: auto
+    padding: 0 0 4em 0
     .content-header
         width: 60%
         max-width: 600px
@@ -115,10 +124,6 @@ header
         border-bottom: 1px solid #ccc
         text-align: center
 
-    h1 
-        font-size: 2.5em
-    h2,
-        font-size: 2em
     h1+h2
         padding: 0.7em 0 0 0
 
@@ -149,11 +154,11 @@ header
         width: 5em
 
 .button-box
-    @extend .content
-    box-sizing: border-box
-    min-height: 10vh
+    @extend ._panel
+    overflow: initial
+    height: 10vh
     margin: 0 auto
-    padding: 4em 0 4em 0
+    padding: 3em 0 3em 0
     text-align: center
     @media #{$phone}
         padding: 2em 0em 2em 0em
@@ -172,7 +177,8 @@ header
         @media #{$phone}
             padding: 1.5em 0
     .button+.button
-        margin-left: 20px
+        margin-left: 10px
+        @media #{$tiny-phone}
 
 footer
     box-sizing: border-box
