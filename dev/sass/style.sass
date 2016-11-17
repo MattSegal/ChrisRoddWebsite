@@ -156,26 +156,27 @@ header
 .button-box
     @extend ._panel
     overflow: initial
-    height: 10vh
+    $button-height: 10vh
+    height: $button-height
     margin: 0 auto
-    padding: 3em 0 3em 0
+    padding: 0
     text-align: center
     @media #{$phone}
-        padding: 2em 0em 2em 0em
+        padding: 0
     .button
         @extend h2
         cursor: pointer
         display: inline-block
-        height: 2em
-        line-height: 0
-        padding: 1em 0.4em
+        height: $button-height
+        line-height: $button-height
+        padding: 0em 0.4em
         box-sizing: border-box
         &:hover
             text-decoration: underline
         &.selected
             color: $selected-text-color
         @media #{$phone}
-            padding: 1.5em 0
+            padding: 0
     .button+.button
         margin-left: 10px
         @media #{$tiny-phone}
