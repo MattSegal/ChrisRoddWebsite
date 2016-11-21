@@ -29,9 +29,21 @@ h1, h2, nav, a, .button
     font-family: 'abril-fat-face'
     color: $header-text-color
 
+
+
 p, li, h3
+
     font-family: 'EB Garamond',Georgia,Times,serif
     color: $paragraph-text-color
+
+p > a
+    font-family: 'EB Garamond',Georgia,Times,serif
+    color: $paragraph-text-color-alt
+    text-decoration: none
+    &:hover
+        color: $selected-text-color-alt
+
+
 p, li
     font-weight: 400
 h3 

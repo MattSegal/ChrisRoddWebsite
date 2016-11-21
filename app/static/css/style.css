@@ -11,6 +11,13 @@ p, li, h3 {
   font-family: 'EB Garamond',Georgia,Times,serif;
   color: #111; }
 
+p > a {
+  font-family: 'EB Garamond',Georgia,Times,serif;
+  color: #fff;
+  text-decoration: none; }
+  p > a:hover {
+    color: #fcc; }
+
 p, li {
   font-weight: 400; }
 
