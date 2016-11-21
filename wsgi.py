@@ -11,5 +11,4 @@ path    = os.path.dirname(project)
 if project not in sys.path:
     sys.path.insert(0,project)
 
-from app import create_app
-application = create_app()
+from app import app as application
