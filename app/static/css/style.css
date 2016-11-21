@@ -16,7 +16,7 @@ p > a {
   color: #fff;
   text-decoration: none; }
   p > a:hover {
-    color: #fcc; }
+    text-decoration: underline; }
 
 p, li {
   font-weight: 400; }
