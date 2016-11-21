@@ -6,7 +6,8 @@
             "js",
             "img",
             "fonts",
-            "templates"
+            "templates",
+            "app"
         ]
     },
 
@@ -27,9 +28,13 @@
             "ttf",
             "woff"
         ],
-        "deployable" : [],
+        "deployable" : [
+            "requirements.txt",
+            "debian.txt",
+        ],
         "non-deployable" : [
-            "gulpfile.js"
+            "gulpfile.js",
+            "package.json"
         ]
     }
 }
