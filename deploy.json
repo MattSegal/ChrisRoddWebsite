@@ -30,7 +30,7 @@
         ],
         "deployable" : [
             "requirements.txt",
-            "debian.txt",
+            "debian.txt"
         ],
         "non-deployable" : [
             "gulpfile.js",
