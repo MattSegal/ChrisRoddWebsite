@@ -1,6 +1,6 @@
 var panels = [
     "about",
-    "comittees",
+    "committees",
     "cgu",
     "teaching",
     "contact",
