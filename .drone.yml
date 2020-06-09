@@ -11,6 +11,10 @@ steps:
     commands:
       - echo hello world task 1
 
+trigger:
+  event:
+    - custom
+
 ---
 kind: pipeline
 type: exec
