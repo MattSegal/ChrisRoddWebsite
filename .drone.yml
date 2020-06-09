@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: exec
-name: default
+name: task 1
 
 platform:
   os: linux
@@ -9,4 +9,17 @@ platform:
 steps:
   - name: greeting
     commands:
-      - echo hello world
+      - echo hello world task 1
+
+---
+kind: pipeline
+type: exec
+name: task 2
+
+platform:
+  os: linux
+  arch: amd64
+steps:
+  - name: greeting
+    commands:
+      - echo hello world task 2
